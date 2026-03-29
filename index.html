@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>VoVabruh</title>
+
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        background: black;
+        color: white;
+        font-family: 'UnifrakturCook', cursive;
+        overflow-x: hidden;
+    }
+
+    .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 6vw;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+
+    .mountains-section {
+        height: 120vh;
+        position: relative;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 1.5s ease;
+    }
+
+    .mountains-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .mountains {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: url('https://images.unsplash.com/photo-1603898037225-2b2dfc9c4e57?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        filter: brightness(0.7);
+    }
+
+    .caption {
+        position: absolute;
+        top: 20%;
+        width: 100%;
+        text-align: center;
+        font-size: 4vw;
+        text-shadow: 0 0 20px black;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    VoVabruh soon
+</div>
+
+<div class="mountains-section" id="mountains">
+    <div class="mountains"></div>
+    <div class="caption">чечня круто</div>
+</div>
+
+<script>
+    const section = document.getElementById('mountains');
+
+    window.addEventListener('scroll', () => {
+        const rec
